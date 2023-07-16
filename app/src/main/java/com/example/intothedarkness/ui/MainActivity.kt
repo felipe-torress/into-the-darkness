@@ -1,4 +1,4 @@
-package com.example.intothedarkness
+package com.example.intothedarkness.ui
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
