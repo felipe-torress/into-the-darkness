@@ -1,3 +1,11 @@
 <resources>
+    <!--  App Name  -->
     <string name="app_name">Into The Darkness</string>
+
+    <!--  Main Activity  -->
+    <string name="change_theme_button_text">Change to %1$s</string>
+
+    <!--  Theme Mode  -->
+    <string name="light_mode_text">Light Mode</string>
+    <string name="dark_mode_text">Dark Mode</string>
 </resources>
