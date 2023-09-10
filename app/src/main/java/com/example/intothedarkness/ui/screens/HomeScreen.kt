@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import com.example.intothedarkness.ui.composables.ChangeThemeButton
 import com.example.intothedarkness.ui.theme.IntoTheDarknessTheme
 
@@ -20,12 +21,16 @@ fun HomeScreen() {
     var isDarkTheme by remember { mutableStateOf(false) }
     IntoTheDarknessTheme(darkTheme = isDarkTheme) {
         Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
+            modifier = Modifier
+                .testTag("HomeScreenSurface")
+                .fillMaxSize()
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier
+                    .testTag("HomeScreenColumn")
             ) {
                 ChangeThemeButton(
                     isDarkTheme = isDarkTheme,
